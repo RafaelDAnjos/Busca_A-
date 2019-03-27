@@ -5,15 +5,25 @@ Algoritmo A* implementação
 
 Laribirinto pelo qual o agente será submetido.
 """
-labirinto = [[0,1,0,0,0,0],
-             [0,1,0,0,0,0],
-             [0,1,0,0,0,0],
-             [0,1,0,0,0,0],
-             [0,0,0,0,1,0]]
+labirinto = []
+arq =  open("labirinto.txt","r")
+linha = arq.readline()
+while linha != "":
+    linha = linha.split(" ")
+    labirinto.append(linha)
+
+    linha = arq.readline()
+
+
+
 #ponto de partida do agente
+
 partida = [0,0]
 #ponto de chegada do agente
-chegada = [4,5]
+
+chegada = [len(labirinto)-1,len(labirinto[0])-1]
+
+
 #custo por movimento.
 custo = 1
 
