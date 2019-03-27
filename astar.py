@@ -16,18 +16,18 @@ while linha != "":
 
 
 
-#ponto de partida do agente
+
 
 partida = [0,0]
-#ponto de chegada do agente
+
 
 chegada = [len(labirinto)-1,len(labirinto[0])-1]
 
 
-#custo por movimento.
+
 custo = 1
 
-#como heurística foi estabelecia a distancia de Manhathan
+
 
 heuristica = [[9,8,7,6,5,4],
               [8,7,6,5,4,3],
@@ -35,14 +35,15 @@ heuristica = [[9,8,7,6,5,4],
               [6,5,4,3,2,1],
               [5,4,3,2,1,0]]
 
-#delta é a tradução dos movimentos permitidos pelo agente
 delta = [[-1,0],  #pra cima
         [0,-1],  #pra esquerda
         [1,0],   #pra baixo
         [0,1]]   #pra direita
 
-delta_name = ["^","<","v",">"]
+
 aberta = []
+
+
 def busca():
 
 
